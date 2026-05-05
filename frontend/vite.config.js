@@ -7,8 +7,10 @@ export default defineConfig({
   // Railway / reverse-proxy hostnames are not localhost; allow *.railway.app (leading dot = subdomains too).
   server: {
     allowedHosts: ['.railway.app'],
+    allowedHosts: ['.com'],
   },
   preview: {
     allowedHosts: ['.railway.app'],
+    allowedHosts: ['.com'],
   },
 })
