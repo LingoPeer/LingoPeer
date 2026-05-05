@@ -18,6 +18,12 @@ export default function LandingPage() {
     navigate('/register');
   };
 
+  const handlePricingAction = (plan) => {
+    if (plan === 'free') navigate('/register');
+    else if (plan === 'individual') navigate('/register');
+    else navigate('/login');
+  };
+
   return (
     <div className="landing-root">
 
@@ -203,6 +209,57 @@ export default function LandingPage() {
             </li>
           </ol>
         </div>
+      </div>
+    </section>
+
+    <section id="pricing" className="landing-pricing-section">
+      <div className="landing-pricing-header">
+        <span className="landing-why-eyebrow">Pricing</span>
+        <h2 className="landing-pricing-title">Choose your plan</h2>
+        <p className="landing-pricing-subtitle">
+          Start free, then unlock full AI learning and organization tools when you are ready.
+        </p>
+      </div>
+      <div className="landing-pricing-grid">
+        <article className="landing-pricing-card">
+          <h3>Free</h3>
+          <p className="landing-pricing-price">$0</p>
+          <ul>
+            <li>Week 1 lessons</li>
+            <li>Basic learning flow</li>
+            <li>Limited AI tutor usage</li>
+          </ul>
+          <button className="landing-secondary-button landing-pricing-btn" onClick={() => handlePricingAction('free')}>
+            Start free
+          </button>
+        </article>
+
+        <article className="landing-pricing-card landing-pricing-card-featured">
+          <div className="landing-pricing-badge">Most popular</div>
+          <h3>Individual</h3>
+          <p className="landing-pricing-price">$12.99<span>/month</span></p>
+          <ul>
+            <li>All lessons and levels</li>
+            <li>Personalized AI roadmap</li>
+            <li>Progress analytics + AI-generated lessons</li>
+          </ul>
+          <button className="landing-primary-button landing-pricing-btn" onClick={() => handlePricingAction('individual')}>
+            Get individual
+          </button>
+        </article>
+
+        <article className="landing-pricing-card">
+          <h3>School / Organization</h3>
+          <p className="landing-pricing-price">$8<span>/seat</span></p>
+          <ul>
+            <li>Multi-user student management</li>
+            <li>Admin controls and dashboard</li>
+            <li>Group reporting and insights</li>
+          </ul>
+          <button className="landing-outline-button landing-pricing-btn" onClick={() => handlePricingAction('school')}>
+            Contact / Login
+          </button>
+        </article>
       </div>
     </section>
 

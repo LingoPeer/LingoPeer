@@ -923,4 +923,128 @@
   margin-top: 0;
 }
 
+/* Pricing Section */
+.landing-pricing-section {
+  width: 100vw;
+  background: #ffffff;
+  padding: 90px 20px 80px;
+}
+
+.landing-pricing-header {
+  max-width: 920px;
+  margin: 0 auto 28px;
+  text-align: center;
+}
+
+.landing-pricing-title {
+  font-size: 40px;
+  font-weight: 900;
+  color: #0f172a;
+  margin: 10px 0 12px;
+}
+
+.landing-pricing-subtitle {
+  max-width: 680px;
+  margin: 0 auto;
+  color: #64748b;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.landing-pricing-grid {
+  max-width: 1120px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.landing-pricing-card {
+  position: relative;
+  background: #f5f7ff;
+  border: 1px solid #dfe7fb;
+  border-radius: 20px;
+  padding: 28px 24px;
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.08);
+  transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
+  overflow: hidden;
+}
+
+.landing-pricing-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, transparent 35%, rgba(255, 255, 255, 0.65) 50%, transparent 65%);
+  transform: translateX(-120%);
+  transition: transform 0.8s ease;
+  pointer-events: none;
+}
+
+.landing-pricing-card:hover::after {
+  transform: translateX(120%);
+}
+
+.landing-pricing-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 24px 44px rgba(19, 55, 236, 0.16);
+  border-color: rgba(19, 55, 236, 0.35);
+}
+
+.landing-pricing-card-featured {
+  border-color: rgba(19, 55, 236, 0.38);
+  background: linear-gradient(180deg, #eef3ff 0%, #f5f7ff 100%);
+}
+
+.landing-pricing-badge {
+  display: inline-block;
+  margin-bottom: 14px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #1337ec;
+  background: rgba(19, 55, 236, 0.12);
+}
+
+.landing-pricing-card h3 {
+  margin: 0 0 8px;
+  font-size: 26px;
+  line-height: 1.2;
+  color: #0f172a;
+}
+
+.landing-pricing-price {
+  margin: 0 0 14px;
+  font-size: 34px;
+  font-weight: 800;
+  color: #1337ec;
+}
+
+.landing-pricing-price span {
+  font-size: 14px;
+  font-weight: 600;
+  color: #64748b;
+  margin-left: 4px;
+}
+
+.landing-pricing-card ul {
+  margin: 0 0 18px;
+  padding-left: 18px;
+  color: #475569;
+  line-height: 1.7;
+  font-size: 14px;
+}
+
+.landing-pricing-btn {
+  width: 100%;
+}
+
+@media (max-width: 960px) {
+  .landing-pricing-grid {
+    grid-template-columns: 1fr;
+    max-width: 560px;
+  }
+}
 
