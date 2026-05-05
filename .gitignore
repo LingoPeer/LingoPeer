@@ -1,0 +1,7 @@
+DATABASE_URL=postgresql://postgres:JOtUSIXrBZWjueyrFMUQGEaGrZPKWyxD@metro.proxy.rlwy.net:11916/railway
+JWT_SECRET=9f8a7b6c5d4e3f2a1b0c_super_secret_key_2026!
+
+# Google Gemini (rotate key if it was ever shared publicly)
+GEMINI_API_KEY=AIzaSyDi6fyAIw1sJ1fzCTw8H-XzgW3vvwSZGp8
+# Use a model id your key can access (see https://ai.google.dev/gemini-api/docs/models )
+GEMINI_MODEL=gemini-3-flash-preview

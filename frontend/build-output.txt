@@ -1,0 +1,31 @@
+
+> frontend@0.0.0 build
+> vite build
+
+[36mrolldown-vite v7.2.5 [32mbuilding client environment for production...[36m[39m
+[2Ktransforming...✓ 91 modules transformed.
+[33m[lightningcss minify] Unknown at rule: @tailwind
+1  |  @tailwind base;
+   |           ^
+2  |  @tailwind components;
+3  |  @tailwind utilities;[39m
+[33m[lightningcss minify] Unknown at rule: @tailwind
+1  |  @tailwind base;
+2  |  @tailwind components;
+   |           ^
+3  |  @tailwind utilities;
+4  |  [39m
+[33m[lightningcss minify] Unknown at rule: @tailwind
+1  |  @tailwind base;
+2  |  @tailwind components;
+3  |  @tailwind utilities;
+   |           ^
+4  |  
+5  |  * {[39m
+rendering chunks...
+computing gzip size...
+dist/index.html                                  0.82 kB │ gzip:   0.46 kB
+dist/assets/fast-track-learning-B9luEnu1.jpeg    8.47 kB
+dist/assets/index-B3rtpsln.css                  89.88 kB │ gzip:  16.57 kB
+dist/assets/index-asIsmulR.js                  394.58 kB │ gzip: 115.62 kB
+[32m✓ built in 328ms[39m

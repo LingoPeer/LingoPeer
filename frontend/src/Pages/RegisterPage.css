@@ -1,0 +1,361 @@
+/* ===== PAGE ROOT ===== */
+.register-root {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    padding: 48px 16px 80px;
+    background: #0d1117;
+    background-image:
+      radial-gradient(ellipse 900px 500px at 20% 40%, rgba(13, 30, 70, 0.75) 0%, transparent 70%),
+      radial-gradient(ellipse 600px 400px at 80% 60%, rgba(10, 20, 55, 0.5) 0%, transparent 70%);
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    color: #e2e8f0;
+  }
+  
+  /* ===== CARD ===== */
+  .register-card {
+    width: 100%;
+    max-width: 480px;
+    border-radius: 18px;
+    border: 1px solid rgba(148, 163, 184, 0.18);
+    background: #111827;
+    box-shadow: 0 32px 80px rgba(0, 0, 0, 0.6);
+    padding: 36px 36px 32px;
+  }
+  
+  /* ===== NAVBAR ===== */
+  .register-navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 32px;
+    height: 56px;
+    background: #0d1117;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  }
+  
+  .register-navbar-brand {
+    display: flex;
+    align-items: center;
+  gap: 9px;
+  }
+  
+.register-navbar-logo {
+  height: 36px;
+  width: auto;
+  display: block;
+  }
+  
+  .register-navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: #6b7280;
+  }
+  
+  /* ===== TOP ROW (unused) ===== */
+  .register-top-row {
+    display: none;
+  }
+  
+  /* ===== HEADER ===== */
+  .register-title {
+    font-size: 28px;
+    font-weight: 800;
+    color: #f9fafb;
+    text-align: center;
+    margin: 0 0 10px;
+    letter-spacing: -0.02em;
+  }
+  
+  .register-subtitle {
+    font-size: 14px;
+    color: #6b7280;
+    text-align: center;
+    margin: 0 0 28px;
+  }
+  
+  /* ===== FORM ===== */
+  .register-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+  
+  .register-label {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #9ca3af;
+    letter-spacing: 0.01em;
+  }
+  
+  /* Wrapper for input + eye icon */
+  .register-input-wrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  
+  .register-input {
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid rgba(75, 85, 99, 0.7);
+    background: #1a2235;
+    padding: 12px 14px;
+    font-size: 14px;
+    color: #e2e8f0;
+    outline: none;
+    box-sizing: border-box;
+    transition: border-color 0.15s, box-shadow 0.15s;
+  }
+  
+  .register-input::placeholder {
+    color: #374151;
+  }
+  
+  .register-input:focus {
+    border-color: rgba(59, 130, 246, 0.7);
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.18);
+  }
+  
+  /* Password eye toggle */
+  .register-eye-btn {
+    position: absolute;
+    right: 12px;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    color: #4b5563;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.15s;
+  }
+  
+  .register-eye-btn:hover {
+    color: #9ca3af;
+  }
+  
+  /* ===== PASSWORD STRENGTH ===== */
+  .register-strength {
+    margin-top: 6px;
+  }
+  
+  .register-strength-bar {
+    height: 4px;
+    border-radius: 999px;
+    background: rgba(255,255,255,0.07);
+    overflow: hidden;
+    margin-bottom: 5px;
+  }
+  
+  .register-strength-fill {
+    height: 100%;
+    transition: width 0.3s ease, background 0.3s ease;
+    border-radius: 999px;
+  }
+  
+  .register-strength-text {
+    font-size: 12px;
+    color: #6b7280;
+  }
+  
+  .register-strength-text span {
+    font-weight: 700;
+  }
+  
+  /* ===== PRIMARY BUTTON ===== */
+  .register-primary-btn {
+    margin-top: 6px;
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    padding: 13px 14px;
+    background: #2563eb;
+    color: #fff;
+    font-weight: 700;
+    font-size: 15px;
+    cursor: pointer;
+    letter-spacing: 0.01em;
+    transition: filter 0.15s;
+  }
+  
+  .register-primary-btn:hover {
+    filter: brightness(1.08);
+  }
+  
+  /* ===== DIVIDER ===== */
+  .register-divider {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 22px 0 16px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #4b5563;
+  }
+  
+  .register-divider span {
+    flex: 1;
+    height: 1px;
+    background: rgba(75, 85, 99, 0.45);
+  }
+  
+  /* ===== SOCIAL BUTTONS ===== */
+  .register-social-row {
+    display: flex;
+    gap: 12px;
+  }
+  
+  .register-social-btn {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border-radius: 10px;
+    border: 1px solid rgba(75, 85, 99, 0.55);
+    background: #1a2235;
+    color: #d1d5db;
+    padding: 11px 10px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.12s;
+  }
+  
+  .register-social-btn:hover {
+    background: rgba(255,255,255,0.05);
+  }
+  
+  .register-social-btn svg {
+    flex-shrink: 0;
+  }
+  
+  .register-social-btn-full {
+    width: 100%;
+    background: transparent;
+    border: 1px solid rgba(96, 165, 250, 0.3);
+    color: #cbd5e1;
+    font-weight: 600;
+    padding: 12px 16px;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+  
+  .register-social-btn-full:hover {
+    background: rgba(37, 99, 235, 0.1);
+    border-color: rgba(96, 165, 250, 0.6);
+    color: #e2e8f0;
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.2);
+  }
+
+  /* ===== GOOGLE BUTTON WRAPPER ===== */
+  .register-google-wrapper {
+    position: relative;
+    width: 100%;
+    min-height: 48px;
+    border-radius: 12px;
+    background: #172033;
+    border: 1px solid rgba(148, 163, 184, 0.18);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .register-google-wrapper:hover {
+    border-color: rgba(96, 165, 250, 0.35);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.08);
+  }
+
+  .google-btn-container {
+    width: 100%;
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.2s ease;
+  }
+
+  .google-btn-skeleton {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border-radius: 12px;
+    background: #172033;
+    color: #9ca3af;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: default;
+    animation: google-skeleton-pulse 1.6s ease-in-out infinite;
+  }
+
+  .google-btn-skeleton span {
+    color: #9ca3af;
+  }
+
+  @keyframes google-skeleton-pulse {
+    0%, 100% { opacity: 0.55; }
+    50% { opacity: 1; }
+  }
+  
+  /* ===== BOTTOM TEXT ===== */
+  .register-bottom-text {
+    margin-top: 22px;
+    font-size: 12px;
+    color: #6b7280;
+    text-align: center;
+    line-height: 1.6;
+  }
+  
+  .register-footer-text {
+    margin-top: 12px;
+    font-size: 12px;
+    color: #374151;
+    text-align: center;
+  }
+  
+  /* ===== LINK BUTTON ===== */
+  .register-link {
+    background: none;
+    border: none;
+    padding: 0;
+    font-size: inherit;
+    font-weight: 600;
+    color: #3b82f6;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  
+  .register-link:hover {
+    text-decoration: underline;
+  }
+  
+  /* ===== BRAND NAME (unused if hidden) ===== */
+  .register-brand-name {
+    font-weight: 700;
+    color: #e5e7eb;
+  }
+  
+  .register-top-link {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    color: #9ca3af;
+  }

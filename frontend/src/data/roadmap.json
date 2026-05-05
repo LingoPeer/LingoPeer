@@ -1,0 +1,266 @@
+{
+    "goal": "C1 Fluency Proficiency",
+    "progress": 45,
+    "streak": 12,
+    "units": [
+      {
+        "id": 1,
+        "title": "Daily Life",
+        "icon": "home",
+        "status": "completed",
+        "description": "Mastering everyday conversations, shopping, and home-related vocabulary.",
+        "lessons": [],
+        "completedLessons": 8
+      },
+      {
+        "id": 2,
+        "title": "Travel & Culture",
+        "icon": "map",
+        "status": "current",
+        "description": "Navigating new places, understanding customs, and discussing global events.",
+        "lessons": [
+                    {
+                      "id": 1,
+                      "title": "Present Simple",
+                      "progress": 100,
+                      "completed": true
+                    },
+                    {
+                      "id": 2,
+                      "title": "Present Continuous",
+                      "progress": 100,
+                      "completed": true
+                    },
+                    {
+                      "id": 3,
+                      "title": "Present Perfect",
+                      "progress": 65,
+                      "completed": false,
+                      "content": {
+                        "title": "Present Perfect Tense",
+                        "subtitle": "Mastering life experiences and actions with present relevance.",
+                        "explanation": "The present perfect is used to indicate a link between the present and the past. The time of the action is before now but not specified, and we are often more interested in the result than in the action itself.",
+                        "formula": {
+                          "parts": ["Subject", "Have / Has", "Past Participle"]
+                        },
+                        "examples": [
+                          {
+                            "category": "TRAVEL",
+                            "sentence": "I have visited Paris three times.",
+                            "highlighted": "have visited",
+                            "description": "Experience in life without a specific date."
+                          },
+                          {
+                            "category": "ACHIEVEMENT",
+                            "sentence": "She has finished her degree.",
+                            "highlighted": "has finished",
+                            "description": "An action completed in the past with a present result."
+                          },
+                          {
+                            "category": "ONGOING",
+                            "sentence": "We have lived here since 2010.",
+                            "highlighted": "have lived",
+                            "description": "Started in the past and continues to the present."
+                          }
+                        ],
+                        "timeMarkers": [
+                          {
+                            "id": 1,
+                            "term": "Already",
+                            "definition": "Something happened sooner than expected."
+                          },
+                          {
+                            "id": 2,
+                            "term": "Yet",
+                            "definition": "Expectation that something will happen."
+                          },
+                          {
+                            "id": 3,
+                            "term": "Ever / Never",
+                            "definition": "Referring to any time in your life."
+                          },
+                          {
+                            "id": 4,
+                            "term": "Since / For",
+                            "definition": "Specifying duration or starting point."
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "id": 4,
+                      "title": "Past Simple",
+                      "progress": 0,
+                      "completed": false,
+                      "content": {
+                        "title": "Past Simple Tense",
+                        "subtitle": "Talking about completed actions in the past.",
+                        "explanation": "The past simple is used to describe actions that were completed at a specific time in the past. It is one of the most commonly used tenses in English.",
+                        "formula": {
+                          "parts": ["Subject", "Verb + ed / Irregular", "Object"]
+                        },
+                        "examples": [
+                          {
+                            "category": "REGULAR",
+                            "sentence": "I walked to the store yesterday.",
+                            "highlighted": "walked",
+                            "description": "A regular verb in past simple form."
+                          },
+                          {
+                            "category": "IRREGULAR",
+                            "sentence": "She went to Paris last year.",
+                            "highlighted": "went",
+                            "description": "An irregular verb in past simple form."
+                          },
+                          {
+                            "category": "NEGATIVE",
+                            "sentence": "They didn't watch the movie.",
+                            "highlighted": "didn't watch",
+                            "description": "Negative form using did not + base verb."
+                          }
+                        ],
+                        "timeMarkers": [
+                          {
+                            "id": 1,
+                            "term": "Yesterday",
+                            "definition": "Refers to the day before today."
+                          },
+                          {
+                            "id": 2,
+                            "term": "Last week/month/year",
+                            "definition": "Refers to a completed period in the past."
+                          },
+                          {
+                            "id": 3,
+                            "term": "Ago",
+                            "definition": "Shows how long before now something happened."
+                          },
+                          {
+                            "id": 4,
+                            "term": "In 2020",
+                            "definition": "Specifies a particular year in the past."
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "id": 5,
+                      "title": "Past Continuous",
+                      "progress": 0,
+                      "completed": false
+                    },
+                    {
+                      "id": 6,
+                      "title": "Past Perfect",
+                      "progress": 0,
+                      "completed": false
+                    },
+                    {
+                      "id": 7,
+                      "title": "Future Simple",
+                      "progress": 0,
+                      "completed": false
+                    },
+                    {
+                      "id": 8,
+                      "title": "Future Continuous",
+                      "progress": 0,
+                      "completed": false
+                    },
+                    {
+                      "id": 9,
+                      "title": "Future Continuous",
+                      "progress": 0,
+                      "completed": false
+                    },
+                    {
+                      "id": 10,
+                      "title": "Future Continuous",
+                      "progress": 0,
+                      "completed": false
+                    }
+        ],
+        "completedLessons": 2,
+        "topics": [
+          "Present Simple",
+          "Present Continuous",
+          "Present Perfect",
+          "Discussing World News",
+          "Booking Flights & Accommodation",
+          "Cultural Etiquette",
+          "Ordering Food Abroad",
+          "Discussing World News"
+        ]
+      },
+      {
+        "id": 3,
+        "title": "Professional Communication",
+        "icon": "work",
+        "status": "locked",
+        "description": "Excelling in business meetings, presentations, and formal writing.",
+        "lessons":[
+          {
+            "id": 1,
+            "title": "Present Simple",
+            "progress": 100,
+            "completed": true
+          },
+          {
+            "id": 2,
+            "title": "Present Simple",
+            "progress": 50,
+            "completed": false,
+            "content":{
+                "title": "Present Simple",
+                "subtitle": "",
+                "explanation": "",
+                "formula": {
+                  "parts": []
+                },
+                "examples":[],
+                "timeMarkers":[]
+            }
+          }
+        ],
+        "completedLessons": 0,
+        "topics": []
+      },
+      {
+        "id": 4,
+        "title": "Professional Communication",
+        "icon": "work",
+        "status": "locked",
+        "description": "Excelling in business meetings, presentations, and formal writing.",
+        "lessons": [],
+        "completedLessons": 0
+      },
+      {
+        "id": 5,
+        "title": "Professional Communication",
+        "icon": "work",
+        "status": "locked",
+        "description": "Excelling in business meetings, presentations, and formal writing.",
+        "lessons": [],
+        "completedLessons": 0
+      },
+      {
+        "id": 6,
+        "title": "Professional Communication",
+        "icon": "work",
+        "status": "locked",
+        "description": "Excelling in business meetings, presentations, and formal writing.",
+        "lessons": [],
+        "completedLessons": 0
+      },
+      {
+        "id": 7,
+        "title": "Your Final Milestone",
+        "icon": "home",
+        "status": "locked",
+        "description": "Complete all units to earn your C1 Proficiency Certificate and unlock the Advanced AI Debate Room.",
+        "lessons": [],
+        "completedLessons": 8
+      }
+    ]
+  }
+  

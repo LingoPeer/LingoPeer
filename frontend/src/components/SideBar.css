@@ -1,0 +1,166 @@
+/* Sidebar */
+.roadmap-sidebar {
+    width: 320px;
+    border-right: 1px solid #1e293b;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 16px;
+    background-color: #0f172a;
+    position: sticky;
+    top: 57px;
+    align-self: flex-start;
+    height: calc(100vh - 57px);
+    overflow-y: auto;
+    flex-shrink: 0;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .roadmap-sidebar::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .sidebar-top {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  
+  .current-goal-section {
+    display: flex;
+    flex-direction: column;
+    padding: 0 12px;
+  }
+  
+  .current-goal-label {
+    font-size: 12px;
+    font-weight: 600;
+    color: #94a3b8;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 4px;
+  }
+  
+  .current-goal-text {
+    font-size: 16px;
+    font-weight: 700;
+    color: #1337ec;
+  }
+  
+  .sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  
+  .sidebar-nav-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    border-radius: 8px;
+    color: #94a3b8;
+    text-decoration: none;
+    transition: all 0.2s;
+    font-size: 14px;
+  }
+  
+  .sidebar-nav-item:hover {
+    background-color: #1e293b;
+  }
+  
+  .sidebar-nav-item.active {
+    background-color: rgba(19, 55, 236, 0.1);
+    color: #1337ec;
+    font-weight: 700;
+  }
+  
+  .sidebar-bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .progressRoadmap-card {
+    background-color: #1e293b;
+    border-radius: 12px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .progressRoadmap-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .progressRoadmap-level {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #94a3b8;
+    opacity: 0.6;
+  }
+  
+  .progressRoadmap-percentage {
+    font-size: 12px;
+    font-weight: 700;
+    color: #1337ec;
+  }
+  
+  .progressRoadmap-bar-container {
+    height: 8px;
+    border-radius: 9999px;
+    background-color: #334155;
+    overflow: hidden;
+  }
+  
+  .progressRoadmap-bar-fill {
+    height: 100%;
+    background-color: #1337ec;
+    border-radius: 9999px;
+    transition: width 0.3s;
+  }
+  
+  .streak-info {
+    font-size: 12px;
+    opacity: 0.7;
+    color: #94a3b8;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-top: 4px;
+  }
+  
+  .streak-icon {
+    font-size: 14px;
+    color: #f97316;
+  }
+  
+  .help-button {
+    width: 100%;
+    height: 44px;
+    border-radius: 8px;
+    background-color: #1337ec;
+    color: white;
+    border: none;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    box-shadow: 0 4px 6px -1px rgba(19, 55, 236, 0.2);
+  }
+  
+  .help-button:hover {
+    background-color: #1e40af;
+  }
+
+  @media (max-width: 1024px) {
+    .roadmap-sidebar {
+      display: none;
+    }
+  }
