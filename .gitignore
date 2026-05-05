@@ -1,7 +1,25 @@
-DATABASE_URL=postgresql://postgres:JOtUSIXrBZWjueyrFMUQGEaGrZPKWyxD@metro.proxy.rlwy.net:11916/railway
-JWT_SECRET=9f8a7b6c5d4e3f2a1b0c_super_secret_key_2026!
+# Dependencies
+node_modules/
 
-# Google Gemini (rotate key if it was ever shared publicly)
-GEMINI_API_KEY=AIzaSyDi6fyAIw1sJ1fzCTw8H-XzgW3vvwSZGp8
-# Use a model id your key can access (see https://ai.google.dev/gemini-api/docs/models )
-GEMINI_MODEL=gemini-3-flash-preview
+# Secrets and local env files
+.env
+.env.*
+!.env.example
+!.**/.env.example
+
+# Builds
+**/dist
+**/dist-ssr
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+*.swp
