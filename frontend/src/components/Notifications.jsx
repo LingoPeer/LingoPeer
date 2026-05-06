@@ -63,6 +63,7 @@ export default function Notifications() {
       auth: {
         token: auth.token,
       },
+      reconnectionAttempts: 5,
     });
     socketRef.current = socket;
 
@@ -93,10 +94,11 @@ export default function Notifications() {
     // Poll for new notifications every 30 seconds (fallback)
     const interval = setInterval(() => {
       fetchUnreadCount();
-    }, 30000);
+    }, 60000);
     
     return () => {
       clearInterval(interval);
+      socket.off('notification:new');
       socket.disconnect();
     };
   }, [auth.token]);
