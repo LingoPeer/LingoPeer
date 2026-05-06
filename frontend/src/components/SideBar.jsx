@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import roadmapData from '../data/roadmap.json';
 import { useAuth } from '../auth/AuthContext';
+import { NavLink } from 'react-router-dom';
 import "./SideBar.css"
 
 export default function SideBar(){
@@ -28,30 +29,48 @@ export default function SideBar(){
                 <p className="current-goal-text">{goalText}</p>
             </div>
             <nav className="sidebar-nav">
-                <a className={`sidebar-nav-item ${IsActive ? 'active' : ''}`} href="/dashboard" onClick={() => setIsActive(true)}>
-                <span className="material-symbols-outlined">dashboard</span>
-                <span>Dashboard</span>
-                </a>
-                <a className="sidebar-nav-item" href="/roadmap">
-                <span className="material-symbols-outlined filled-icon">map</span>
-                <span>My Roadmap</span>
-                </a>
-                <a className="sidebar-nav-item" href="/notepad">
-                <span className="material-symbols-outlined">style</span>
-                <span>Note Pad</span>
-                </a>
-                <a className="sidebar-nav-item" href="/community">
-                <span className="material-symbols-outlined">groups</span>
-                <span>Community</span>
-                </a>
-                <a className="sidebar-nav-item" href="/analytics">
-                <span className="material-symbols-outlined">bar_chart</span>
-                <span>Statistics</span>
-                </a>
-                <a className="sidebar-nav-item" href="/leaderboard">
-                <span className="material-symbols-outlined">bar_chart</span>
-                <span>LeaderBoard</span>
-                </a>
+                <NavLink 
+                  to="/dashboard" 
+                  className={({ isActive }) => `sidebar-nav-item ${isActive ? 'active' : ''}`}
+                >
+                  <span className="material-symbols-outlined">dashboard</span>
+                  <span>Dashboard</span>
+                </NavLink>
+                <NavLink 
+                  to="/roadmap" 
+                  className={({ isActive }) => `sidebar-nav-item ${isActive ? 'active' : ''}`}
+                >
+                  <span className="material-symbols-outlined">map</span>
+                  <span>Roadmap</span>
+                </NavLink>
+                <NavLink 
+                  to="/notepad" 
+                  className={({ isActive }) => `sidebar-nav-item ${isActive ? 'active' : ''}`}
+                >
+                  <span className="material-symbols-outlined">style</span>
+                  <span>Note Pad</span>
+                </NavLink>
+                <NavLink 
+                  to="/community" 
+                  className={({ isActive }) => `sidebar-nav-item ${isActive ? 'active' : ''}`}
+                >
+                  <span className="material-symbols-outlined">groups</span>
+                  <span>Community</span>
+                </NavLink>
+                <NavLink 
+                  to="/analytics" 
+                  className={({ isActive }) => `sidebar-nav-item ${isActive ? 'active' : ''}`}
+                >
+                  <span className="material-symbols-outlined">bar_chart</span>
+                  <span>Statistics</span>
+                </NavLink>
+                <NavLink 
+                  to="/leaderboard" 
+                  className={({ isActive }) => `sidebar-nav-item ${isActive ? 'active' : ''}`}
+                >
+                  <span className="material-symbols-outlined">bar_chart</span>
+                  <span>LeaderBoard</span>
+                </NavLink>
             </nav>
             </div>
             <div className="sidebar-bottom">

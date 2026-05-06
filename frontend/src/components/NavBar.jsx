@@ -92,10 +92,9 @@ export default function NavBar({ fixed = false }) {
       </div>
       <div className="header-right">
         <nav className="header-nav">
-          <Link to="/roadmap">Roadmap</Link>
           <Link to="/dashboard">Dashboard</Link>
+          <Link to="/roadmap">Roadmap</Link>
           <Link to="/community">Community</Link>
-          <Link to="/notepad">Notes</Link>
         </nav>
         <div className="header-actions" ref={menuRef}>
           <Notifications />
