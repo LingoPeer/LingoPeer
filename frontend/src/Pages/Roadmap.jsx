@@ -215,12 +215,9 @@ export default function Roadmap() {
 
       <main className="roadmap-main">
         <SideBar
-          className={`roadmap-sidebar ${sidebarOpen ? 'open' : ''}`}
+          open={sidebarOpen}
           onClose={() => setSidebarOpen(false)}
         />
-        {sidebarOpen && (
-          <div className="sidebar-overlay open" onClick={() => setSidebarOpen(false)} />
-        )}
 
         <div className="roadmap-content">
           <div className="content-wrapper">

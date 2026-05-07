@@ -14,7 +14,7 @@ function initialsFromName(name) {
   return name.slice(0, 2).toUpperCase();
 }
 
-export default function NavBar({ fixed = false }) {
+export default function NavBar({ fixed = false, onMenuClick }) {
   const { auth, logout, updateAvatar } = useAuth();
   const navigate = useNavigate();
   const [menuOpen, setMenuOpen] = useState(false);
@@ -50,6 +50,14 @@ export default function NavBar({ fixed = false }) {
     setProfileModalOpen(true);
   };
 
+  const handleMobileMenu = () => {
+    if (onMenuClick) {
+      onMenuClick();
+      return;
+    }
+    window.dispatchEvent(new Event('sidebar:toggle'));
+  };
+
   const handleFileChange = async (e) => {
     const file = e.target.files?.[0];
     if (!file) return;
@@ -71,15 +79,18 @@ export default function NavBar({ fixed = false }) {
 
   return (
     <header className={`roadmap-header ${fixed ? 'roadmap-header--fixed' : ''}`}>
-      <Link to="/" className="header-left-link">
-        <div className="header-left">
+      <div className="header-left">
+        <button type="button" className="mobile-menu-button" aria-label="Toggle sidebar" onClick={handleMobileMenu}>
+          <span className="material-symbols-outlined">menu</span>
+        </button>
+        <Link to="/" className="header-left-link">
           <img
             src="/lingopeer%20logo.png"
             alt="LingoPeer logo"
             className="brand-logo-image"
           />
-        </div>
-      </Link>
+        </Link>
+      </div>
       <div className="dashboard-header">
         <div className="dashboard-search">
           <span className="material-symbols-outlined">search</span>

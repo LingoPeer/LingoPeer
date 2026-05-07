@@ -51,6 +51,7 @@ export default function LeaderboardPage() {
   const navigate = useNavigate();
   const [payload, setPayload] = useState(null);
   const [loadError, setLoadError] = useState("");
+  const [isMobile, setIsMobile] = useState(() => window.innerWidth <= 768);
 
   useEffect(() => {
     let cancelled = false;
@@ -68,6 +69,12 @@ export default function LeaderboardPage() {
       }
     })();
     return () => { cancelled = true; };
+  }, []);
+
+  useEffect(() => {
+    const onResize = () => setIsMobile(window.innerWidth <= 768);
+    window.addEventListener("resize", onResize);
+    return () => window.removeEventListener("resize", onResize);
   }, []);
 
   const rows = payload?.leaderboard ?? [];
@@ -104,17 +111,17 @@ export default function LeaderboardPage() {
     }}>
       <NavBar />
 
-      <div style={{ display: "flex", flex: 1, minHeight: 0 }}>
+      <div style={{ display: isMobile ? "block" : "flex", flex: 1, minHeight: 0 }}>
         <SideBar />
 
         <main style={{
           flex: 1,
           overflowY: "auto",
           background: "#0f1623",
-          padding: "32px 32px 80px",
+          padding: isMobile ? "16px 12px 40px" : "32px 32px 80px",
           boxSizing: "border-box",
         }}>
-          <div style={{ maxWidth: "980px", paddingLeft: '5%' }}>
+          <div style={{ maxWidth: "980px", paddingLeft: isMobile ? 0 : "5%" }}>
 
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: "24px", gap: "16px", flexWrap: "wrap" }}>
               <div>
@@ -148,7 +155,7 @@ export default function LeaderboardPage() {
               </button>
             </div>
 
-            <div style={{ display: "grid", gridTemplateColumns: "1fr 1.18fr 1fr", gap: "12px", marginBottom: "20px", alignItems: "flex-end" }}>
+            <div style={{ display: "grid", gridTemplateColumns: isMobile ? "1fr" : "1fr 1.18fr 1fr", gap: "12px", marginBottom: "20px", alignItems: "flex-end" }}>
               {podiumTriple.map((p, idx) => {
                 const isCenter = idx === 1;
                 if (!p) {
@@ -215,14 +222,15 @@ export default function LeaderboardPage() {
               background: "#111827",
               border: "1px solid rgba(255,255,255,0.08)",
               borderRadius: "14px",
-              overflow: "hidden",
+              overflowX: "auto",
               marginBottom: "16px",
             }}>
               <div style={{
                 display: "grid",
-                gridTemplateColumns: "52px 1fr 120px 80px 90px",
+                gridTemplateColumns: "52px minmax(160px,1fr) 120px 80px 90px",
                 padding: "10px 20px",
                 borderBottom: "1px solid rgba(255,255,255,0.07)",
+                minWidth: isMobile ? "560px" : "auto",
               }}>
                 {["RANK", "LEARNER", "LEAGUE", "STREAK", "XP"].map((h) => (
                   <div key={h} style={{ fontSize: "10px", fontWeight: "700", letterSpacing: "0.1em", color: "#4b5563", textTransform: "uppercase" }}>
@@ -240,13 +248,14 @@ export default function LeaderboardPage() {
                   key={r.user_id}
                   style={{
                     display: "grid",
-                    gridTemplateColumns: "52px 1fr 120px 80px 90px",
+                    gridTemplateColumns: "52px minmax(160px,1fr) 120px 80px 90px",
                     padding: "14px 20px",
                     alignItems: "center",
                     borderBottom: i < tableRows.length - 1 ? "1px solid rgba(255,255,255,0.05)" : "none",
                     transition: "background 0.12s",
                     cursor: "default",
                     background: r.is_you ? "rgba(37,99,235,0.08)" : "transparent",
+                    minWidth: isMobile ? "560px" : "auto",
                   }}
                   onMouseEnter={(e) => { if (!r.is_you) e.currentTarget.style.background = "rgba(255,255,255,0.03)"; }}
                   onMouseLeave={(e) => { e.currentTarget.style.background = r.is_you ? "rgba(37,99,235,0.08)" : "transparent"; }}

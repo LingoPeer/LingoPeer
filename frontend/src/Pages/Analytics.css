@@ -14,6 +14,8 @@
   gap: 24px;
   max-width: 1050px;
   padding-left: 5%;
+  width: 100%;
+  padding-right: 24px;
 }
 .analytics-header {
   display: flex;
@@ -314,6 +316,24 @@
   overflow-x: hidden;
 }
 @media (max-width: 768px) {
+  .root {
+    display: block;
+  }
+  .analytics-root {
+    max-width: 100%;
+    padding: 16px 12px 24px;
+  }
+  .analytics-profile {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .analytics-header-actions {
+    width: 100%;
+  }
+  .analytics-secondary-button,
+  .analytics-primary-button {
+    flex: 1;
+  }
   .analytics-search {
     width: 100%;
   }

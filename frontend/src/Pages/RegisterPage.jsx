@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../auth/AuthContext';
 import { initGoogleAuth, renderGoogleButton } from '../utils/googleAuth';
 import './RegisterPage.css';
@@ -118,6 +118,7 @@ export default function RegisterPage() {
     <>
       {/* Inline Navbar */}
       <header className="register-navbar">
+        <Link to="/">
         <div className="register-navbar-brand">
           <img
             src="/lingopeer%20logo.png"
@@ -125,6 +126,7 @@ export default function RegisterPage() {
             className="register-navbar-logo"
           />
         </div>
+        </Link>
         <div className="register-navbar-right">
           <span>Already have an account?</span>
           <button

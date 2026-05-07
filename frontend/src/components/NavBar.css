@@ -22,6 +22,20 @@
     align-items: center;
   gap: 10px;
   }
+
+  .mobile-menu-button {
+    display: none;
+    width: 38px;
+    height: 38px;
+    border-radius: 8px;
+    border: 1px solid rgba(148, 163, 184, 0.25);
+    background-color: #1e293b;
+    color: #f8fafc;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-right: 8px;
+  }
   
 .brand-logo-image {
   height: 42px;
@@ -33,6 +47,7 @@
     display: flex;
     align-items: center;
     gap: 32px;
+    min-width: 0;
   }
   
   .header-nav {
@@ -323,4 +338,83 @@
 .profile-modal-upload-btn:disabled {
   opacity: 0.6;
   cursor: not-allowed;
+}
+
+@media (max-width: 1024px) {
+  .roadmap-header {
+    padding: 10px 12px;
+    gap: 10px;
+  }
+
+  .mobile-menu-button {
+    display: inline-flex;
+  }
+
+  .dashboard-header {
+    display: none;
+  }
+
+  .header-nav {
+    display: none;
+  }
+
+  .header-right {
+    gap: 10px;
+  }
+
+  .icon-button {
+    width: 36px;
+    height: 36px;
+  }
+
+  .user-avatar {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+@media (max-width: 640px) {
+  .roadmap-header {
+    padding: 8px 10px;
+  }
+
+  .brand-logo-image {
+    height: 34px;
+  }
+
+  .header-left {
+    gap: 6px;
+    min-width: 0;
+  }
+
+  .header-right {
+    gap: 6px;
+  }
+
+  .header-actions {
+    gap: 6px;
+  }
+
+  .icon-button {
+    width: 34px;
+    height: 34px;
+    border-radius: 7px;
+  }
+
+  .user-avatar {
+    width: 34px;
+    height: 34px;
+  }
+
+  .mobile-menu-button {
+    width: 34px;
+    height: 34px;
+    margin-right: 4px;
+  }
+
+  .profile-menu {
+    right: 0;
+    min-width: min(260px, 92vw);
+    max-width: 92vw;
+  }
 }

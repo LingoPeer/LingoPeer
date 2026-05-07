@@ -72,7 +72,7 @@ export default function PlacementTest() {
 
   return (
     <QuizRunner
-      brandTitle="AI English Placement"
+      brandTitle="English Placement Test"
       quizTitle="Placement Test"
       questions={questions}
       gradingMode="none"

@@ -4,9 +4,10 @@
     color: #d9e2ef;
     padding: 0;
     margin: 0;
-    width: 100vw;
+    width: 100%;
     font-size: 16px;
     font-family: inherit;
+    overflow-x: hidden;
   }
   
   .footer-container {
@@ -154,7 +155,7 @@
     padding: 18px 36px 14px 36px;
     font-size: 14.2px;
     color: #7c8da7;
-    width: 100vw;
+    width: 100%;
   }
   
   .footer-bottom-left {
@@ -179,7 +180,7 @@
   @media (max-width: 900px) {
     .footer-container {
       flex-direction: column;
-      padding: 44px 10vw 28px 10vw;
+      padding: 44px 20px 28px;
       gap: 0;
     }
     .footer-col, .footer-brand, .footer-newsletter {
@@ -227,22 +228,22 @@
     }
     .footer-container {
       flex-direction: column;
-      padding: 30px 0 13px 0;
+      padding: 28px 12px 14px;
       gap: 0;
     }
     .footer-col, .footer-brand, .footer-newsletter {
       margin-bottom: 18px;
-      width: 100vw;
+      width: 100%;
       min-width: unset;
-      max-width: 98vw;
-      padding: 0 11px;
+      max-width: 100%;
+      padding: 0;
     }
     .footer-logo {
       font-size: 18px;
     }
     .footer-desc {
       font-size: 13px;
-      max-width: 97vw;
+      max-width: 100%;
     }
     .footer-heading {
       font-size: 13.7px;
@@ -270,5 +271,9 @@
       flex-direction: column;
       gap: 6px;
       align-items: flex-start;
+    }
+
+    .footer-bottom-right {
+      flex-wrap: wrap;
     }
   }

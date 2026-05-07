@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useAuth } from '../auth/AuthContext';
 import { initGoogleAuth, renderGoogleButton } from '../utils/googleAuth';
 import './LoginPage.css';
@@ -115,6 +115,7 @@ export default function LoginPage() {
     <>
       {/* Inline Navbar */}
       <header className="login-navbar">
+        <Link to="/">
         <div className="login-navbar-brand">
           <img
             src="/lingopeer%20logo.png"
@@ -122,6 +123,7 @@ export default function LoginPage() {
             className="login-navbar-logo"
           />
         </div>
+        </Link>
         <div className="login-navbar-right">
           <span>Don't have an account?</span>
           <button type="button" className="login-link" onClick={() => navigate('/register')}>

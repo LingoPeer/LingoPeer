@@ -80,6 +80,8 @@ export default function Community() {
   const [privateRecording, setPrivateRecording] = useState(false);
   const [privateRecordingSeconds, setPrivateRecordingSeconds] = useState(0);
   const [privateUploadingVoice, setPrivateUploadingVoice] = useState(false);
+  const [showMobileLounges, setShowMobileLounges] = useState(false);
+  const [showMobileLearners, setShowMobileLearners] = useState(false);
 
   const socketRef = useRef(null);
   const mediaRecorderRef = useRef(null);
@@ -720,6 +722,14 @@ export default function Community() {
                   </span>
                 </div>
               </header>
+              <div className="community-mobile-tools">
+                <button type="button" className="community-mobile-tool-btn" onClick={() => setShowMobileLounges(true)}>
+                  Public Lounges
+                </button>
+                <button type="button" className="community-mobile-tool-btn" onClick={() => setShowMobileLearners(true)}>
+                  Active Learners
+                </button>
+              </div>
 
               <div className="community-chat-body">
                 <div className="community-messages">
@@ -944,6 +954,77 @@ export default function Community() {
                     </div>
                   );
                 })
+              )}
+            </div>
+          </div>
+        </div>
+      )}
+
+      {showMobileLounges && (
+        <div className="mobile-community-panel-overlay" onClick={() => setShowMobileLounges(false)}>
+          <div className="mobile-community-panel" onClick={(e) => e.stopPropagation()}>
+            <div className="mobile-community-panel-header">
+              <h3>Public Lounges</h3>
+              <button type="button" className="profile-modal-close" onClick={() => setShowMobileLounges(false)}>×</button>
+            </div>
+            <div className="mobile-community-panel-body">
+              {ROOMS.map((room) => {
+                const canParticipate = canParticipateInRoom(room);
+                const isLocked = room !== 'General' && !canParticipate;
+                return (
+                  <button
+                    key={room}
+                    type="button"
+                    className={`community-room-item ${room === activeRoom ? 'active' : ''} ${isLocked ? 'locked' : ''}`}
+                    onClick={() => {
+                      setActiveRoom(room);
+                      setShowMobileLounges(false);
+                    }}
+                    title={isLocked ? getReadOnlyMessage(room) : undefined}
+                  >
+                    <span className="community-room-name">{ROOM_INFO[room].title}</span>
+                    <span className="community-room-sub">{ROOM_INFO[room].subtitle}</span>
+                    {isLocked && <span className="room-lock-icon">🔒</span>}
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+      )}
+
+      {showMobileLearners && (
+        <div className="mobile-community-panel-overlay" onClick={() => setShowMobileLearners(false)}>
+          <div className="mobile-community-panel" onClick={(e) => e.stopPropagation()}>
+            <div className="mobile-community-panel-header">
+              <h3>Active Learners</h3>
+              <button type="button" className="profile-modal-close" onClick={() => setShowMobileLearners(false)}>×</button>
+            </div>
+            <div className="mobile-community-panel-body">
+              {activeUsers.length === 0 ? (
+                <p className="community-active-empty">No active learners yet</p>
+              ) : (
+                activeUsers.map((user) => (
+                  <button
+                    key={user.id}
+                    type="button"
+                    className="community-active-user"
+                    onClick={() => {
+                      openUserProfile(user);
+                      setShowMobileLearners(false);
+                    }}
+                    data-user-id={user.id}
+                  >
+                    <div className="community-active-avatar">
+                      {user.avatar ? (
+                        <img src={avatarSrcFor(user.avatar)} alt={user.name} />
+                      ) : (
+                        <span>{buildInitials(user.name)}</span>
+                      )}
+                    </div>
+                    <span className="community-active-name">{user.name}</span>
+                  </button>
+                ))
               )}
             </div>
           </div>
