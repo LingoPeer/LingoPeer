@@ -10,6 +10,11 @@
     z-index: 1000;
   }
 
+  .roadmap-header .dashboard-header {
+    flex: 1;
+    min-width: 0;
+  }
+
   .roadmap-header--fixed {
     position: fixed;
     left: 0;
@@ -48,6 +53,8 @@
     align-items: center;
     gap: 32px;
     min-width: 0;
+    margin-left: auto;
+    flex-shrink: 0;
   }
   
   .header-nav {
@@ -73,6 +80,7 @@
     align-items: center;
     gap: 8px;
     position: relative;
+    flex-shrink: 0;
   }
   
   .icon-button {
@@ -115,6 +123,7 @@
     justify-content: center;
     background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
     border: 2px solid #3b82f6;
+    flex-shrink: 0;
   }
 
   .user-avatar-initials {
@@ -350,8 +359,8 @@
     display: inline-flex;
   }
 
-  .dashboard-header {
-    display: none;
+  .roadmap-header .dashboard-header {
+    display: none !important;
   }
 
   .header-nav {
@@ -389,6 +398,10 @@
 
   .header-right {
     gap: 6px;
+  }
+
+  .nav-settings-button {
+    display: none;
   }
 
   .header-actions {

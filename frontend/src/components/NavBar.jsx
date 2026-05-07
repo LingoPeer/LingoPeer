@@ -109,7 +109,7 @@ export default function NavBar({ fixed = false, onMenuClick }) {
         </nav>
         <div className="header-actions" ref={menuRef}>
           <Notifications />
-          <button type="button" className="icon-button" aria-label="Settings" onClick={() => setProfileModalOpen(true)}>
+          <button type="button" className="icon-button nav-settings-button" aria-label="Settings" onClick={() => setProfileModalOpen(true)}>
             <span className="material-symbols-outlined">settings</span>
           </button>
           <button

@@ -614,6 +614,7 @@
   box-shadow: 0 20px 45px rgba(2, 6, 23, 0.35);
   overflow: hidden;
   min-height: 0;
+  height: 100%;
 }
 
 .community-room-header {
@@ -755,12 +756,16 @@
   .community-main {
     padding: 12px 10px;
     padding-top: 18px;
+    height: calc(100vh - 56px);
+    overflow: hidden;
   }
 
   .community-lounge {
     grid-template-columns: 1fr;
     flex: 1;
     overflow: hidden;
+    min-height: 0;
+    height: 100%;
   }
 
   .community-left {
@@ -772,6 +777,10 @@
     gap: 8px;
     padding: 10px 14px;
     border-bottom: 1px solid rgba(148, 163, 184, 0.08);
+    background: rgba(15, 23, 42, 0.95);
+    position: sticky;
+    top: 0;
+    z-index: 6;
   }
 
   .community-mobile-tool-btn {
@@ -786,8 +795,9 @@
   }
 
   .community-messages {
-    min-height: 300px;
-    max-height: calc(100vh - 200px);
+    min-height: 0;
+    max-height: none;
+    flex: 1;
     padding: 18px 14px;
   }
 
