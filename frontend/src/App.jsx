@@ -13,6 +13,7 @@ import Analytics from './Pages/Analytics';
 import Leaderboard from './Pages/LeaderBoard';
 import Notepad from './Pages/Notepad';
 import Community from './Pages/Community';
+import HelpCenter from './Pages/HelpCenter';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path="/" element={<LandingPage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/register" element={<RegisterPage />} />
+        <Route path="/help-center" element={<HelpCenter />} />
         <Route path="/analytics" element={
           <RequireAuth>
             <Analytics />

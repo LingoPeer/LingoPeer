@@ -106,6 +106,7 @@ export default function NavBar({ fixed = false, onMenuClick }) {
           <Link to="/dashboard">Dashboard</Link>
           <Link to="/roadmap">Roadmap</Link>
           <Link to="/community">Community</Link>
+          <Link to="/help-center">Help Center</Link>
         </nav>
         <div className="header-actions" ref={menuRef}>
           <Notifications />

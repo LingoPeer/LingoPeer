@@ -142,7 +142,13 @@ export default function SideBar({ open, onClose }){
                 {streakDays} day streak · {xpTotal.toLocaleString()} XP
                 </p>
             </div>
-            <button className="help-button">Help Center</button>
+            <NavLink
+              to="/help-center"
+              className="help-button"
+              onClick={closeSidebar}
+            >
+              Help Center
+            </NavLink>
             </div>
        </aside>
        </>

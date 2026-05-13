@@ -33,7 +33,7 @@ export default function Footer(){
           <ul className="footer-links">
             <li><a href="#">About Us</a></li>
             <li><a href="#">Careers</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="/help-center">Contact</a></li>
           </ul>
         </div>
         <div className="footer-col footer-newsletter">
